@@ -26,7 +26,18 @@
         "Description": "The AWS CloudFormation template for this Serverless application",
         "Resources": {
           "ServerlessDeploymentBucket": {
-            "Type": "AWS::S3::Bucket"
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketEncryption": {
+                "ServerSideEncryptionConfiguration": [
+                  {
+                    "ServerSideEncryptionByDefault": {
+                      "SSEAlgorithm": "AES256"
+                    }
+                  }
+                ]
+              }
+            }
           },
           "AppLogGroup": {
             "Type": "AWS::Logs::LogGroup",
@@ -115,7 +126,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/express-serverless-app/v1/1550600335538-2019-02-19T18:18:55.538Z/express-serverless-app.zip"
+                "S3Key": "serverless/express-serverless-app/v1/1550771109339-2019-02-21T17:45:09.339Z/express-serverless-app.zip"
               },
               "FunctionName": "express-serverless-app-v1-app",
               "Handler": "handler.run",
@@ -134,14 +145,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AppLambdaVersionWXnZJ5O5COdCia3UGGFsidm5dGiL8r71YFAASVBxlOg": {
+          "AppLambdaVersionuAu6Z9C6BXzHeGaqWTQTaOsYDtzrRoFXsUVqy9sRhs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "MP625Sqf7EqiesXMt+Fa176/m3RzyAFfySN3NsF7J6I="
+              "CodeSha256": "fFwQfHOZ7MJMcR6Q+37gXmtQydII/QRkdkzgfwJqtks="
             }
           },
           "ApiGatewayRestApi": {
@@ -356,7 +367,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1550600335601": {
+          "ApiGatewayDeployment1550771109423": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -428,7 +439,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersionWXnZJ5O5COdCia3UGGFsidm5dGiL8r71YFAASVBxlOg"
+              "Ref": "AppLambdaVersionuAu6Z9C6BXzHeGaqWTQTaOsYDtzrRoFXsUVqy9sRhs"
             }
           },
           "ServiceEndpoint": {
@@ -457,7 +468,18 @@
         "Description": "The AWS CloudFormation template for this Serverless application",
         "Resources": {
           "ServerlessDeploymentBucket": {
-            "Type": "AWS::S3::Bucket"
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+              "BucketEncryption": {
+                "ServerSideEncryptionConfiguration": [
+                  {
+                    "ServerSideEncryptionByDefault": {
+                      "SSEAlgorithm": "AES256"
+                    }
+                  }
+                ]
+              }
+            }
           }
         },
         "Outputs": {
@@ -540,10 +562,10 @@
       }
     },
     "layers": {},
-    "artifact": "C:\\Users\\Fernanda\\desktop\\projeto\\teste-serverless\\.serverless\\express-serverless-app.zip"
+    "artifact": "C:\\Users\\Fernanda\\desktop\\projeto\\desafio-webedia\\newsapi-serverless\\.serverless\\express-serverless-app.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/express-serverless-app/v1/1550600335538-2019-02-19T18:18:55.538Z",
+    "artifactDirectoryName": "serverless/express-serverless-app/v1/1550771109339-2019-02-21T17:45:09.339Z",
     "artifact": "express-serverless-app.zip"
   }
 }
