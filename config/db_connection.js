@@ -3,7 +3,8 @@
 const mysql = require('mysql');
 
 //conecção com o banco mysql
-const conn = mysql.createConnection({
+const conn = mysql.createPool({
+    connectionLimit : 10,
     host     : 'mynewsdb.cqmj9g4tjztr.sa-east-1.rds.amazonaws.com',
     user     : 'lipeflorentino',
     password : 'cnbm1001',
@@ -11,7 +12,7 @@ const conn = mysql.createConnection({
 });
 
 // conectando com a base de dados
-conn.connect(function(err) {
+conn.getConnection(function(err) {
     if (err) throw err;
     console.log('conectou!');
 });

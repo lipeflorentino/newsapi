@@ -18,13 +18,15 @@ News.getAllNews = function getAllNews(result) {
     sql.query("Select * from newsdb.tb_news_db", function (err, res) {
         if(err) {
             console.log("error: ", err);
-            result(null, err);
+            result(null, err);            
         }
         else{
             console.log('MODEL RESULTS : ', res);  
             result(null, res);
+            
         }
     });   
+    
 };
 
 //metodo do model para pegar uma noticia pelo id
@@ -33,10 +35,12 @@ News.getANewsById = function getANewsById(id, result) {
        if(err){
            console.log("error: " + err);
            result(null, err);
+           
        } 
        else{
            console.log('MODEL RESULTS: ', res);
            result(null, res);
+           
        }
     });
 };
@@ -48,6 +52,8 @@ News.addALike = function addALike(id, result){
         if(err){
             console.log("error: ", err);
             result(null, err);
+            
+            
         }
         else{
             console.log('like computado!');
@@ -55,10 +61,13 @@ News.addALike = function addALike(id, result){
                 if(err){
                    console.log("error: " + err);
                    result(null, err);
+                    
+                    
                 } 
                 else{
                    console.log('BD RESULTS: ', newsres);
                    result(null, newsres);
+                    
                 }                        
             });
         }
