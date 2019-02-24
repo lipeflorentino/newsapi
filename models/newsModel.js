@@ -16,13 +16,12 @@ console.log('criei o model!');
 //metodo do model para listar todas as noticias
 News.getAllNews = function getAllNews(result) {
     sql.query("Select * from newsdb.tb_news_db", function (err, res) {
-
         if(err) {
             console.log("error: ", err);
             result(null, err);
         }
         else{
-            console.log('news : ', res);  
+            console.log('MODEL RESULTS : ', res);  
             result(null, res);
         }
     });   
@@ -36,7 +35,7 @@ News.getANewsById = function getANewsById(id, result) {
            result(null, err);
        } 
        else{
-           console.log('news: ', res);
+           console.log('MODEL RESULTS: ', res);
            result(null, res);
        }
     });
@@ -52,7 +51,17 @@ News.addALike = function addALike(id, result){
         }
         else{
             console.log('like computado!');
-            result(null, res);
+            sql.query("Select * from newsdb.tb_news_db where id = ?", [id], function(err, newsres){
+            if(err){
+               console.log("error: " + err);
+               result(null, err);
+            } 
+            else{
+               console.log('BD RESULTS: ', newsres);
+               result(null, newsres);
+            }
+            
+            
         }
     });
 };

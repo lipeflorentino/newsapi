@@ -31,7 +31,7 @@ exports.add_a_like = function(req, res){
     News.addALike(req.params.id, function(err, likes){
         if (err)
             res.send(err);
-            console.log('resultado: ', likes)
+            console.log('News: ', res)
         res.send(likes);
     });
 };
