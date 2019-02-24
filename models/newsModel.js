@@ -51,17 +51,16 @@ News.addALike = function addALike(id, result){
         }
         else{
             console.log('like computado!');
-            sql.query("Select * from newsdb.tb_news_db where id = ?", [id], function(err, newsres){
-            if(err){
-               console.log("error: " + err);
-               result(null, err);
-            } 
-            else{
-               console.log('BD RESULTS: ', newsres);
-               result(null, newsres);
-            }
-            
-            
+            sql.query("Select id, num_likes from newsdb.tb_news_db where id = ?", [id], function(err, newsres){
+                if(err){
+                   console.log("error: " + err);
+                   result(null, err);
+                } 
+                else{
+                   console.log('BD RESULTS: ', newsres);
+                   result(null, newsres);
+                }                        
+            });
         }
     });
 };
