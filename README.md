@@ -19,3 +19,9 @@ Adiciona like: [https://https://wlzdm90cda.execute-api.us-east-1.amazonaws.com/v
 
 
 *substitua 1 por um id
+
+### Banco de dados:
+
+os dados foram armazenados no serviço da Amazon RDS
+
+as especs do banco de dados mysql está em config/table_data_export

@@ -1,0 +1,14 @@
+"id";"imagem";"titulo";"descricao";"num_likes";"data_publicacao";"createdAt";"updatedAt"
+
+Table: newsdb.tb_news_dbs
+    
+Columns:
+    
+    id int(11) AI PK 
+    imagem longtext 
+    titulo varchar(255) 
+    descricao varchar(255) 
+    num_likes int(11) 
+    data_publicacao datetime 
+    createdAt datetime 
+    updatedAt datetime
