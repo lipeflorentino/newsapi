@@ -126,7 +126,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/express-serverless-app/v1/1551037402599-2019-02-24T19:43:22.599Z/express-serverless-app.zip"
+                "S3Key": "serverless/express-serverless-app/v1/1551045795732-2019-02-24T22:03:15.732Z/express-serverless-app.zip"
               },
               "FunctionName": "express-serverless-app-v1-app",
               "Handler": "handler.run",
@@ -145,14 +145,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AppLambdaVersion2MTiGKjb7urqLtBOXwv967wTWRyL8F449WeKTxe91o": {
+          "AppLambdaVersion5hetl5Vbn60IzDjUVfJIJzgnVN4j6oi9To6vBLkl66Y": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "88yKEaxiKHPcKCfJXGRAOwGFHhfr2fzMEx/9jfOCoR8="
+              "CodeSha256": "mE4/cobqgVGp5jTf/P+cdfRTko3IP2OXly6NPoCoYTQ="
             }
           },
           "ApiGatewayRestApi": {
@@ -367,7 +367,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1551037402705": {
+          "ApiGatewayDeployment1551045795925": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -439,7 +439,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersion2MTiGKjb7urqLtBOXwv967wTWRyL8F449WeKTxe91o"
+              "Ref": "AppLambdaVersion5hetl5Vbn60IzDjUVfJIJzgnVN4j6oi9To6vBLkl66Y"
             }
           },
           "ServiceEndpoint": {
@@ -562,10 +562,10 @@
       }
     },
     "layers": {},
-    "artifact": "C:\\Users\\Fernanda\\Desktop\\projeto\\desafio-webedia\\newsapi-serverless\\.serverless\\express-serverless-app.zip"
+    "artifact": "C:\\Users\\Fernanda\\desktop\\projeto\\desafio-webedia\\newsapi-serverless\\.serverless\\express-serverless-app.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/express-serverless-app/v1/1551037402599-2019-02-24T19:43:22.599Z",
+    "artifactDirectoryName": "serverless/express-serverless-app/v1/1551045795732-2019-02-24T22:03:15.732Z",
     "artifact": "express-serverless-app.zip"
   }
 }
